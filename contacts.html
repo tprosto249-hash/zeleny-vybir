@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Про проєкт і контакти — «Зелений вибір»</title>
+  <meta name="description" content="Про навчальну екоплатформу «Зелений вибір» та демоформа зворотного зв'язку.">
+  <meta property="og:title" content="Про проєкт «Зелений вибір»"><meta property="og:description" content="Навчальний екологічний інформаційний ресурс."><meta property="og:image" content="/assets/og-image.svg"><meta property="og:type" content="website"><meta property="og:url" content="https://example.com/contacts.html"><meta property="og:locale" content="uk_UA"><meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://example.com/contacts.html"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <script>try{const s=localStorage.getItem("zv-theme");document.documentElement.classList.toggle("dark",s?s==="dark":matchMedia("(prefers-color-scheme: dark)").matches)}catch(e){}</script>
+  <script src="https://cdn.tailwindcss.com"></script><script>tailwind.config={darkMode:"class",theme:{extend:{colors:{eco:{50:"#f4f7ef",100:"#e4edda",200:"#c7dcb1",300:"#9bc17e",400:"#6ea653",500:"#4d8738",600:"#3a6c2c",700:"#315624",800:"#2a4722",900:"#233d1e",950:"#10210e"}}}}}</script><link rel="stylesheet" href="css/custom.css">
+  <script defer src="js/theme.js"></script><script defer src="js/nav.js"></script><script defer src="js/form.js"></script>
+</head>
+<body class="min-w-[320px] bg-eco-50 text-eco-950 dark:bg-eco-950 dark:text-eco-50">
+  <a class="skip-link rounded-lg bg-white px-4 py-3 font-bold" href="#main">Перейти до основного вмісту</a>
+  <header class="sticky top-0 z-50 border-b border-eco-100 bg-white/95 dark:border-eco-800 dark:bg-eco-950/95"><nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3" aria-label="Головна навігація">
+    <a class="flex items-center gap-2 font-black" href="index.html"><img src="assets/logo.svg" alt="" width="44" height="44"><span>Зелений вибір</span></a><button id="theme-toggle" type="button" class="ml-auto mr-2 rounded-lg border p-2" aria-label="Увімкнути тему" aria-pressed="false"><span id="theme-icon" aria-hidden="true">☾</span></button><button type="button" data-menu-toggle class="rounded-lg border p-2 sm:hidden" aria-expanded="false" aria-controls="main-menu"><span class="sr-only">Меню</span>☰</button>
+    <div id="main-menu" data-mobile-menu class="absolute left-0 top-full hidden w-full border-b bg-white p-4 dark:bg-eco-950 sm:static sm:flex sm:w-auto sm:border-0 sm:p-0"><ul class="flex flex-col gap-2 sm:flex-row"><li><a data-nav class="block rounded-lg px-3 py-2" href="index.html">Головна</a></li><li><a data-nav class="block rounded-lg px-3 py-2" href="sorting.html">Сортування</a></li><li><a data-nav class="block rounded-lg px-3 py-2" href="quiz.html">Тест</a></li><li><a data-nav class="block rounded-lg px-3 py-2" href="checklist.html">Чекліст</a></li><li><a data-nav class="block rounded-lg px-3 py-2" href="contacts.html">Контакти</a></li></ul></div>
+  </nav></header>
+  <main id="main" class="mx-auto max-w-6xl px-4 py-10">
+    <section aria-labelledby="about-title"><h1 id="about-title" class="text-4xl font-black">Про платформу</h1><p class="mt-4 max-w-3xl text-lg text-eco-700 dark:text-eco-200">«Зелений вибір» — навчальний прототип для ознайомлення з сортуванням відходів, зниженням споживання та повторним використанням речей. Дані демонстраційні і не замінюють офіційні муніципальні правила.</p></section>
+    <section class="mt-10 grid gap-8 md:grid-cols-2" aria-labelledby="contact-title">
+      <div><h2 id="contact-title" class="text-2xl font-bold">Зворотний зв'язок</h2><p class="mt-3 text-eco-700 dark:text-eco-200">Ця демоформа перевіряє поля у браузері. Відправлення даних не відбувається і особисті дані не зберігаються.</p></div>
+      <form id="contact-form" novalidate class="rounded-2xl border border-eco-100 bg-white p-5 dark:border-eco-800 dark:bg-eco-900">
+        <div><label for="name" class="font-bold">Ім’я</label><input id="name" name="name" type="text" autocomplete="name" class="mt-2 w-full rounded-xl border border-eco-300 px-4 py-3 dark:border-eco-700 dark:bg-eco-950" aria-describedby="name-error"><p id="name-error" class="mt-1 text-sm text-red-700" aria-live="polite"></p></div>
+        <div class="mt-4"><label for="email" class="font-bold">Email</label><input id="email" name="email" type="email" autocomplete="email" class="mt-2 w-full rounded-xl border border-eco-300 px-4 py-3 dark:border-eco-700 dark:bg-eco-950" aria-describedby="email-error"><p id="email-error" class="mt-1 text-sm text-red-700" aria-live="polite"></p></div>
+        <div class="mt-4"><label for="phone" class="font-bold">Телефон</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+380 00 000 00 00" class="mt-2 w-full rounded-xl border border-eco-300 px-4 py-3 dark:border-eco-700 dark:bg-eco-950" aria-describedby="phone-error"><p id="phone-error" class="mt-1 text-sm text-red-700" aria-live="polite"></p></div>
+        <div class="mt-4"><label for="topic" class="font-bold">Тема</label><select id="topic" name="topic" class="mt-2 w-full rounded-xl border border-eco-300 px-4 py-3 dark:border-eco-700 dark:bg-eco-950" aria-describedby="topic-error"><option value="">Оберіть тему</option><option value="sorting">Сортування</option><option value="reuse">Повторне використання</option><option value="quiz">Тест і чекліст</option><option value="other">Інше</option></select><p id="topic-error" class="mt-1 text-sm text-red-700" aria-live="polite"></p></div>
+        <div class="mt-4"><label for="message" class="font-bold">Повідомлення</label><textarea id="message" name="message" rows="5" class="mt-2 w-full rounded-xl border border-eco-300 px-4 py-3 dark:border-eco-700 dark:bg-eco-950" aria-describedby="message-error"></textarea><p id="message-error" class="mt-1 text-sm text-red-700" aria-live="polite"></p></div>
+        <button id="submit-button" type="submit" class="mt-5 rounded-xl bg-eco-600 px-6 py-3 font-bold text-white">Надіслати демозаявку</button>
+      </form>
+    </section>
+  </main>
+  <footer class="border-t px-4 py-8 text-center" data-footer></footer>
+  <div id="success-modal" class="modal-backdrop fixed inset-0 z-[60] hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-panel w-full max-w-md rounded-2xl bg-white p-6 text-eco-950 shadow-2xl dark:bg-eco-900 dark:text-white"><h2 id="modal-title" class="text-2xl font-black">Дякуємо за повідомлення!</h2><p class="mt-3">Форма успішно пройшла демоперевірку. Дані не були відправлені.</p><button type="button" data-modal-close class="mt-5 rounded-xl bg-eco-600 px-5 py-3 font-bold text-white">Закрити</button></div>
+  </div>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

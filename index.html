@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Зелений вибір — екологічні звички та сортування</title>
+  <meta name="description" content="Навчальна екоплатформа про сортування відходів, екологічні звички та повторне використання речей.">
+  <meta name="theme-color" content="#16a34a">
+  <meta property="og:title" content="Зелений вибір">
+  <meta property="og:description" content="Практичні поради для екологічного способу життя.">
+  <meta property="og:image" content="/assets/og-image.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:locale" content="uk_UA">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://example.com/">
+  <script>/* Антиблимання теми має виконатися до DOM */try{const s=localStorage.getItem("zv-theme");document.documentElement.classList.toggle("dark",s?s==="dark":matchMedia("(prefers-color-scheme: dark)").matches)}catch(e){}</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={darkMode:"class",theme:{extend:{colors:{eco:{50:"#f4f7ef",100:"#e4edda",200:"#c7dcb1",300:"#9bc17e",400:"#6ea653",500:"#4d8738",600:"#3a6c2c",700:"#315624",800:"#2a4722",900:"#233d1e",950:"#10210e"}}}}}</script>
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script defer src="js/theme.js"></script>
+  <script defer src="js/nav.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+<body class="min-w-[320px] bg-eco-50 font-sans text-eco-950 transition-colors dark:bg-eco-950 dark:text-eco-50">
+  <a class="skip-link rounded-lg bg-white px-4 py-3 font-bold text-eco-900" href="#main">Перейти до основного вмісту</a>
+  <header class="sticky top-0 z-50 border-b border-eco-100 bg-white/95 backdrop-blur dark:border-eco-800 dark:bg-eco-950/95">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3" aria-label="Головна навігація">
+      <a class="flex items-center gap-2 font-black text-eco-800 dark:text-eco-100" href="index.html" aria-label="Зелений вибір — на головну">
+        <img src="assets/logo.svg" alt="" width="44" height="44"><span>Зелений вибір</span>
+      </a>
+      <button id="theme-toggle" type="button" class="ml-auto mr-2 rounded-lg border border-eco-200 p-2" aria-label="Увімкнути темну тему" aria-pressed="false"><span id="theme-icon" aria-hidden="true">☾</span></button>
+      <button type="button" data-menu-toggle class="rounded-lg border border-eco-200 p-2 sm:hidden" aria-expanded="false" aria-controls="main-menu"><span class="sr-only">Меню</span><span aria-hidden="true">☰</span></button>
+      <div id="main-menu" data-mobile-menu class="absolute left-0 top-full hidden w-full border-b border-eco-100 bg-white p-4 shadow-lg dark:border-eco-800 dark:bg-eco-950 sm:static sm:flex sm:w-auto sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none">
+        <ul class="flex flex-col gap-2 sm:flex-row sm:items-center">
+          <li><a data-nav class="block rounded-lg px-3 py-2 hover:bg-eco-100 dark:hover:bg-eco-900" href="index.html">Головна</a></li>
+          <li><a data-nav class="block rounded-lg px-3 py-2 hover:bg-eco-100 dark:hover:bg-eco-900" href="sorting.html">Сортування</a></li>
+          <li><a data-nav class="block rounded-lg px-3 py-2 hover:bg-eco-100 dark:hover:bg-eco-900" href="quiz.html">Тест</a></li>
+          <li><a data-nav class="block rounded-lg px-3 py-2 hover:bg-eco-100 dark:hover:bg-eco-900" href="checklist.html">Чекліст</a></li>
+          <li><a data-nav class="block rounded-lg px-3 py-2 hover:bg-eco-100 dark:hover:bg-eco-900" href="contacts.html">Контакти</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="mx-auto grid max-w-7xl items-center gap-8 px-4 py-12 md:grid-cols-2 md:py-20" aria-labelledby="hero-title">
+      <div>
+        <p class="font-bold uppercase tracking-widest text-eco-600 dark:text-eco-300">Малі кроки — реальний вплив</p>
+        <h1 id="hero-title" class="mt-3 text-4xl font-black leading-tight text-eco-950 dark:text-white sm:text-5xl">Роби усвідомлений зелений вибір</h1>
+        <p class="mt-5 max-w-xl text-lg text-eco-700 dark:text-eco-200">Дізнайся, куди класти відходи, перевір свої екозвички та склади персональний план економії.</p>
+        <div class="mt-7 flex flex-wrap gap-3"><a class="rounded-xl bg-eco-600 px-6 py-3 font-bold text-white shadow-lg hover:bg-eco-700" href="quiz.html">Пройти тест</a><a class="rounded-xl border border-eco-300 px-6 py-3 font-bold hover:bg-white dark:hover:bg-eco-900" href="sorting.html">Довідник сортування</a></div>
+      </div>
+      <img class="mx-auto w-full max-w-lg" src="assets/illustrations/eco-hero.svg" alt="Ілюстрація листя та багаторазової пляшки на тлі сонячного міста" width="640" height="520">
+    </section>
+    <section class="mx-auto max-w-7xl px-4 py-10" aria-labelledby="benefits-title">
+      <h2 id="benefits-title" class="text-center text-3xl font-black">Чому це працює</h2>
+      <div class="mt-8 grid gap-5 md:grid-cols-3">
+        <article class="rounded-2xl border border-eco-100 bg-white p-6 dark:border-eco-800 dark:bg-eco-900"><h3 class="text-xl font-bold">Зрозумілі правила</h3><p class="mt-2 text-eco-700 dark:text-eco-200">Карти сортування пояснюють підготовку та напрямок кожного предмета.</p></article>
+        <article class="rounded-2xl border border-eco-100 bg-white p-6 dark:border-eco-800 dark:bg-eco-900"><h3 class="text-xl font-bold">Особистий план</h3><p class="mt-2 text-eco-700 dark:text-eco-200">Чекліст перетворює звички на орієнтовну економію ресурсів.</p></article>
+        <article class="rounded-2xl border border-eco-100 bg-white p-6 dark:border-eco-800 dark:bg-eco-900"><h3 class="text-xl font-bold">Навчання без тиску</h3><p class="mt-2 text-eco-700 dark:text-eco-200">Тест дає поради відповідно до поточного рівня знань.</p></article>
+      </div>
+    </section>
+    <section class="mx-auto max-w-7xl px-4 py-12" aria-labelledby="advice-title">
+      <h2 id="advice-title" class="text-3xl font-black">Поради та відгуки</h2>
+      <div id="home-loader" class="mt-6 flex items-center gap-3"><div class="loader" aria-hidden="true"></div><p>Завантаження матеріалів…</p></div>
+      <div class="swiper eco-swiper mt-6"><div id="swiper-wrapper" class="swiper-wrapper"></div><div class="swiper-pagination"></div></div>
+    </section>
+    <section class="bg-eco-800 py-12 text-white" aria-labelledby="counter-title">
+      <div class="mx-auto max-w-7xl px-4"><h2 id="counter-title" class="text-center text-3xl font-black">Еколічильник спільноти</h2><div class="mt-8 grid grid-cols-2 gap-4 text-center md:grid-cols-4">
+        <div><strong class="block text-4xl" data-counter="1240">0</strong><span>відсортовано предметів</span></div><div><strong class="block text-4xl" data-counter="860">0</strong><span>звичок обрано</span></div><div><strong class="block text-4xl" data-counter="420">0</strong><span>речей передано</span></div><div><strong class="block text-4xl" data-counter="96">0</strong><span>навчальних ситуацій</span></div>
+      </div></div>
+    </section>
+    <section class="mx-auto max-w-7xl px-4 py-14 text-center" aria-labelledby="cta-title"><h2 id="cta-title" class="text-3xl font-black">Готові перевірити свої звички?</h2><p class="mt-3 text-eco-700 dark:text-eco-200">Дайте відповідь на 10 коротких питань і отримайте персональну пораду.</p><a class="mt-6 inline-block rounded-xl bg-eco-600 px-7 py-3 font-bold text-white hover:bg-eco-700" href="quiz.html">Розпочати тест</a></section>
+  </main>
+  <footer class="border-t border-eco-100 bg-white px-4 py-8 text-center text-eco-700 dark:border-eco-800 dark:bg-eco-950 dark:text-eco-200"><div data-footer></div></footer>
+  <!-- Vercel Analytics працює лише після розгортання на Vercel і не збирає дані у цій локальній демоверсії. -->
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

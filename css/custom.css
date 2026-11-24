@@ -1,0 +1,18 @@
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; }
+:focus-visible { outline: 3px solid #16a34a; outline-offset: 3px; }
+.skip-link { position: absolute; left: 1rem; top: -100px; z-index: 100; }
+.skip-link:focus { top: 1rem; }
+.nav-open { max-height: 32rem; }
+.loader { width: 44px; height: 44px; border: 4px solid #bbf7d0; border-top-color: #16a34a; border-radius: 50%; animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.bar { height: 12px; border-radius: 999px; transition: width .35s ease; }
+.category-bar { min-height: 8px; border-radius: 999px 999px 0 0; transition: height .35s ease; }
+.modal-backdrop { background: rgba(7, 31, 19, .72); backdrop-filter: blur(4px); }
+.modal-panel { max-height: calc(100vh - 2rem); overflow-y: auto; }
+.swiper { width: 100%; padding-bottom: 3rem; }
+.swiper-pagination-bullet-active { background: #16a34a; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

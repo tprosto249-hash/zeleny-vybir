@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Сортування відходів — довідник «Зелений вибір»</title>
+  <meta name="description" content="Інтерактивний довідник про підготовку та сортування побутових відходів за категоріями.">
+  <meta property="og:title" content="Довідник сортування"><meta property="og:description" content="Куди класти предмети та як їх підготувати."><meta property="og:image" content="/assets/og-image.svg"><meta property="og:type" content="website"><meta property="og:url" content="https://example.com/sorting.html"><meta property="og:locale" content="uk_UA"><meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://example.com/sorting.html"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <script>try{const s=localStorage.getItem("zv-theme");document.documentElement.classList.toggle("dark",s?s==="dark":matchMedia("(prefers-color-scheme: dark)").matches)}catch(e){}</script>
+  <script src="https://cdn.tailwindcss.com"></script><script>tailwind.config={darkMode:"class",theme:{extend:{colors:{eco:{50:"#f4f7ef",100:"#e4edda",200:"#c7dcb1",300:"#9bc17e",400:"#6ea653",500:"#4d8738",600:"#3a6c2c",700:"#315624",800:"#2a4722",900:"#233d1e",950:"#10210e"}}}}}</script><link rel="stylesheet" href="css/custom.css">
+  <script defer src="js/theme.js"></script><script defer src="js/nav.js"></script><script defer src="js/sorting.js"></script>
+</head>
+<body class="min-w-[320px] bg-eco-50 text-eco-950 dark:bg-eco-950 dark:text-eco-50">
+  <a class="skip-link rounded-lg bg-white px-4 py-3 font-bold" href="#main">Перейти до основного вмісту</a>
+  <header class="sticky top-0 z-50 border-b border-eco-100 bg-white/95 backdrop-blur dark:border-eco-800 dark:bg-eco-950/95"><nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3" aria-label="Головна навігація">
+    <a class="flex items-center gap-2 font-black" href="index.html"><img src="assets/logo.svg" alt="" width="44" height="44"><span>Зелений вибір</span></a><button id="theme-toggle" type="button" class="ml-auto mr-2 rounded-lg border p-2" aria-label="Увімкнути тему" aria-pressed="false"><span id="theme-icon" aria-hidden="true">☾</span></button><button type="button" data-menu-toggle class="rounded-lg border p-2 sm:hidden" aria-expanded="false" aria-controls="main-menu"><span class="sr-only">Меню</span>☰</button>
+    <div id="main-menu" data-mobile-menu class="absolute left-0 top-full hidden w-full border-b bg-white p-4 dark:bg-eco-950 sm:static sm:flex sm:w-auto sm:border-0 sm:p-0"><ul class="flex flex-col gap-2 sm:flex-row"><li><a data-nav class="block rounded-lg px-3 py-2" href="index.html">Головна</a></li><li><a data-nav class="block rounded-lg px-3 py-2" href="sorting.html">Сортування</a></li><li><a data-nav class="block rounded-lg px-3 py-2" href="quiz.html">Тест</a></li><li><a data-nav class="block rounded-lg px-3 py-2" href="checklist.html">Чекліст</a></li><li><a data-nav class="block rounded-lg px-3 py-2" href="contacts.html">Контакти</a></li></ul></div>
+  </nav></header>
+  <main id="main" class="mx-auto max-w-7xl px-4 py-10">
+    <h1 class="text-4xl font-black">Довідник сортування відходів</h1><p class="mt-3 max-w-3xl text-eco-700 dark:text-eco-200">Знайдіть предмет і дізнайтеся, як підготувати його до повторного використання або переробки.</p>
+    <form class="mt-8 grid gap-4 rounded-2xl border border-eco-100 bg-white p-4 dark:border-eco-800 dark:bg-eco-900 md:grid-cols-2" role="search" onsubmit="return false">
+      <div><label class="font-bold" for="waste-search">Пошук предмета</label><input id="waste-search" type="search" class="mt-2 w-full rounded-xl border border-eco-300 bg-white px-4 py-3 dark:border-eco-700 dark:bg-eco-950" placeholder="Наприклад, пляшка"></div>
+      <div><label class="font-bold" for="category-filter">Категорія</label><select id="category-filter" class="mt-2 w-full rounded-xl border border-eco-300 bg-white px-4 py-3 dark:border-eco-700 dark:bg-eco-950"><option value="all">Усі</option></select></div>
+      <button type="submit" class="sr-only">Застосувати пошук</button>
+    </form>
+    <div id="sorting-loader" class="mt-8 flex items-center gap-3" role="status"><div class="loader" aria-hidden="true"></div><span>Завантаження довідника…</span></div>
+    <section class="mt-8" aria-label="Результати пошуку"><div id="waste-grid" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"></div></section>
+  </main>
+  <footer class="border-t px-4 py-8 text-center" data-footer></footer>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
